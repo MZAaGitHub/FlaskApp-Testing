@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Books API</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>Books List</h1>
+    <div class="form-container" id="form-container">
+        <h2>Add / Update Book</h2>
+        <input type="hidden" id="bookId" value="">
+        <input type="text" id="bookTitle" placeholder="Book Title">
+        <input type="text" id="bookAuthor" placeholder="Book Author">
+        <button onclick="addOrUpdateBook()">Save</button>
+    </div>
+    <ul class="book-list" id="book-list">
+        <!-- Books will be added here dynamically -->
+    </ul>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
